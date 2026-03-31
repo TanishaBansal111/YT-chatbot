@@ -39,6 +39,26 @@ An AI-powered Retrieval-Augmented Generation (RAG) system that enables users to 
 * Tailwind CSS
 * Axios
 
+## 🧠 How It Works (RAG Pipeline)
+### 🔹 1. Data Ingestion
+* Extract transcripts using YouTube Transcript API
+* Converts video into usable text data
+### 🔹 2. Chunking
+* Splits transcript into smaller chunks (300–500 tokens)
+* Improves retrieval precision and context quality
+### 🔹 3. Embeddings
+* Converts chunks into vector embeddings
+* Captures semantic meaning of text
+### 🔹 4. Vector Database
+* Stores embeddings using FAISS
+* Enables fast similarity-based retrieval
+### 🔹 5. Retrieval
+* User query → embedding
+* Top relevant chunks fetched from FAISS
+### 🔹 6. Generation
+* Retrieved context + query → passed to TinyLlama via Ollama
+* Generates accurate answers with reduced hallucination
+
 <p align="center" style="margin: 30px 0;"><img width="550" height="300" alt="image" src="https://github.com/user-attachments/assets/19f35e03-7544-491d-88db-ad318d1e73a3" /></p>
 <p align="center" style="margin: 30px 0;"><img width="550" height="300" alt="image" src="https://github.com/user-attachments/assets/34510b00-3c4a-4c57-97dd-10fb4b5cda7a" /></p>
 
