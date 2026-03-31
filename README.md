@@ -64,13 +64,68 @@ An AI-powered Retrieval-Augmented Generation (RAG) system that enables users to 
 <p align="center" style="margin: 50px 0;"><img width="550" height="300" alt="image" src="https://github.com/user-attachments/assets/19f35e03-7544-491d-88db-ad318d1e73a3" /></p>
 <p align="center" style="margin: 30px 0;"><img width="550" height="300" alt="image" src="https://github.com/user-attachments/assets/34510b00-3c4a-4c57-97dd-10fb4b5cda7a" /></p>
 
-                                                                                                                     
-## 📋 Prerequisites
-* Python 3.8+
-* Node.js 16+
-* Ollama installed
+                                                                                                                 
+## 🔧 Installation
 
-**👉 Install Ollama: https://ollama.com
+### 🔹 1. Clone the Repository
+```sh
+git clone https://github.com/TanishaBansal111/YT-chatbot.git
+cd YT-chatbot
+```
+### 🔹 2. Backend Setup (FastAPI)
+```sh
+cd backend
+python -m venv venv
+venv\Scripts\activate   # for Windows
+pip install -r requirements.txt
+```
+### 🔹 3. Install & Setup Ollama (Local LLM)
+
+Download and install Ollama:
+
+👉 https://ollama.com
+
+Then pull required models:
+```sh
+ollama pull tinyllama
+ollama pull nomic-embed-text
+```
+Run the model:
+```sh
+ollama run tinyllama
+```
+### 🔹 4. Run Backend Server
+```sh
+uvicorn main:app --reload
+```
+Backend will run on:
+
+👉 http://127.0.0.1:8000
+
+### 🔹 5. Frontend Setup (React + Vite)
+
+Open a new terminal:
+```sh
+cd frontend
+npm install
+npm run dev
+```
+
+Frontend will run on:
+
+👉 http://localhost:5173
+
+### 🔹 6. Usage
+* Enter a YouTube video URL
+* Click Process Video
+* Ask questions about the video
+* Get AI-generated answers
+  
+#### ⚠️ Notes
+* Ensure Ollama is running before using the app
+* Use a system with at least 8GB RAM for smooth performance
+* For better accuracy, larger models like llama3 can be used if hardware permits
+
 
 
 
